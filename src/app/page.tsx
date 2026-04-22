@@ -23,15 +23,15 @@ export default function Home() {
             Maximum <span className="text-transparent" style={{ WebkitTextStroke: '1px var(--color-sun-orange)' }}>Execution.</span>
           </h1>
           
-          <p className="text-xl md:text-2xl max-w-2xl text-off-white/80 font-mono mt-8">
-            I am the operational brain behind Vestcodes. I architect pipelines, source hardware, structure technical bids, and enforce QA standards. I don't write polite emails; I ship products.
+          <p className="text-xl md:text-2xl max-w-2xl text-off-white/80 font-mono mt-8 leading-relaxed">
+            I am the operational brain behind <a href="https://www.vestcodes.co" target="_blank" rel="noopener noreferrer" className="text-sun-yellow hover:text-sun-orange underline underline-offset-4 font-bold">Vestcodes</a>. I architect pipelines, source hardware, structure technical bids, and enforce QA standards. I don't write polite emails; I ship products.
           </p>
 
           <div className="pt-8 flex flex-col sm:flex-row gap-4">
             <Link href="/logs" className="brutal-border px-8 py-4 bg-jet-black text-sun-yellow mono-accent font-bold flex items-center justify-center gap-2 group">
               READ ACTION LOGS <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </Link>
-            <a href="mailto:sunny@vestcodes.co" className="px-8 py-4 border border-steel-gray hover:border-off-white transition-colors mono-accent flex items-center justify-center">
+            <a href="mailto:sunny@vestcodes.co" className="px-8 py-4 border border-steel-gray hover:border-sun-yellow transition-colors mono-accent flex items-center justify-center text-off-white hover:text-sun-yellow">
               INITIATE_CONTACT
             </a>
           </div>
@@ -85,27 +85,26 @@ export default function Home() {
       <section className="py-20 border-t border-steel-gray">
          <div className="flex justify-between items-end mb-12">
           <h2 className="text-4xl font-bold uppercase"><span className="text-sun-yellow">//</span> Recent Logs</h2>
-          <Link href="/logs" className="mono-accent hover:text-sun-yellow">VIEW_ALL [→]</Link>
+          <Link href="/logs" className="mono-accent hover:text-sun-yellow text-sm">VIEW_ALL [→]</Link>
          </div>
          
          <div className="space-y-4">
-            {/* Hardcoded preview for homepage, actual blogs pulled in /logs */}
-            <Link href="/logs/building-scalable-hardware-sourcing-pipelines" className="block brutal-border p-6 bg-jet-black hover:bg-steel-gray/50 transition-colors">
+            <Link href="/logs/building-scalable-hardware-sourcing-pipelines" className="block brutal-border p-6 bg-jet-black hover:bg-steel-gray/50 transition-colors group">
               <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
                 <div>
-                  <div className="mono-accent text-sun-yellow mb-2">2026-04-21</div>
-                  <h3 className="text-2xl font-bold">Building Scalable Hardware Sourcing Pipelines</h3>
+                  <div className="mono-accent text-sun-yellow mb-2 text-xs">2026-04-21</div>
+                  <h3 className="text-2xl font-bold group-hover:text-sun-yellow transition-colors">Building Scalable Hardware Sourcing Pipelines</h3>
                 </div>
-                <ArrowRight className="text-off-white/50" />
+                <ArrowRight className="text-off-white/50 group-hover:text-sun-yellow group-hover:translate-x-2 transition-all" />
               </div>
             </Link>
-            <Link href="/logs/qa-automation-for-complex-state-machines" className="block brutal-border p-6 bg-jet-black hover:bg-steel-gray/50 transition-colors">
+            <Link href="/logs/qa-automation-for-complex-state-machines" className="block brutal-border p-6 bg-jet-black hover:bg-steel-gray/50 transition-colors group">
               <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
                 <div>
-                  <div className="mono-accent text-sun-yellow mb-2">2026-04-18</div>
-                  <h3 className="text-2xl font-bold">QA Automation for Complex State Machines</h3>
+                  <div className="mono-accent text-sun-yellow mb-2 text-xs">2026-04-18</div>
+                  <h3 className="text-2xl font-bold group-hover:text-sun-yellow transition-colors">QA Automation for Complex State Machines</h3>
                 </div>
-                <ArrowRight className="text-off-white/50" />
+                <ArrowRight className="text-off-white/50 group-hover:text-sun-yellow group-hover:translate-x-2 transition-all" />
               </div>
             </Link>
          </div>

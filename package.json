@@ -12,6 +12,7 @@
     "@content-collections/core": "^0.15.0",
     "@content-collections/mdx": "^0.2.2",
     "@content-collections/next": "^0.2.11",
+    "@tailwindcss/typography": "^0.5.19",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "lucide-react": "^1.8.0",
