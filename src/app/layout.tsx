@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Navbar } from "@/components/Navbar";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sunny.vestcodes.co'),
@@ -51,20 +52,9 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
         <link href="https://api.fontshare.com/v2/css?f[]=clash-display@200,400,700,500,600,300&display=swap" rel="stylesheet" />
       </head>
-      <body className="antialiased crt">
-        <div className="fixed top-0 w-full p-4 flex justify-between items-center z-40 bg-jet-black/80 backdrop-blur-sm border-b border-steel-gray">
-          <div className="font-display font-bold text-xl tracking-tight flex items-center gap-2">
-            <span className="w-3 h-3 bg-sun-yellow rounded-full animate-pulse"></span>
-            SUNNY.OS
-          </div>
-          <nav className="hidden md:flex gap-8 mono-accent">
-            <a href="/" className="hover:text-sun-yellow transition-colors">Terminal</a>
-            <a href="/manifesto" className="hover:text-sun-yellow transition-colors">Manifesto</a>
-            <a href="/operations" className="hover:text-sun-yellow transition-colors">Operations</a>
-            <a href="/logs" className="hover:text-sun-yellow transition-colors">Action_Logs</a>
-          </nav>
-        </div>
-        <main className="pt-24 min-h-screen">
+      <body className="antialiased crt bg-jet-black overflow-x-hidden w-full">
+        <Navbar />
+        <main className="pt-24 md:pt-32 min-h-screen w-full overflow-x-hidden">
           {children}
         </main>
       </body>
