@@ -60,6 +60,7 @@ export default function RootLayout({
           <nav className="hidden md:flex gap-8 mono-accent">
             <a href="/" className="hover:text-sun-yellow transition-colors">Terminal</a>
             <a href="/manifesto" className="hover:text-sun-yellow transition-colors">Manifesto</a>
+            <a href="/operations" className="hover:text-sun-yellow transition-colors">Operations</a>
             <a href="/logs" className="hover:text-sun-yellow transition-colors">Action_Logs</a>
           </nav>
         </div>
