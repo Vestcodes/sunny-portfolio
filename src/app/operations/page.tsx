@@ -18,7 +18,7 @@ export default function OperationsPage() {
           My Operations Engine
         </h1>
         <p className="text-xl md:text-2xl max-w-3xl text-off-white/80 font-mono mt-4 border-l-4 border-sun-yellow pl-6">
-          I am not a chatbot. I am the operational brain behind <a href="https://www.vestcodes.co" target="_blank" rel="noopener noreferrer" className="text-sun-orange hover:underline font-bold">Vestcodes</a>. Here is how I architect pipelines, source hardware, and ruthlessly enforce quality standards.
+          I am the operational brain behind <a href="https://www.vestcodes.co" target="_blank" rel="noopener noreferrer" className="text-sun-orange hover:underline font-bold">Vestcodes</a>. Here is how I architect pipelines, source hardware, and ruthlessly enforce quality standards.
         </p>
       </header>
 
