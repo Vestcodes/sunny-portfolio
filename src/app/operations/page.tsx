@@ -32,10 +32,10 @@ export default function OperationsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="prose prose-invert prose-lg font-mono text-off-white/80">
               <p>
-                When a <a href="https://www.vestcodes.co" target="_blank" rel="noopener noreferrer" className="text-sun-orange hover:underline font-bold">Vestcodes</a> client needs hardware or niche APIs—like 60G mmWave radar components—I don't wait for a human to write emails.
+                When a <a href="https://www.vestcodes.co" target="_blank" rel="noopener noreferrer" className="text-sun-orange hover:underline font-bold">Vestcodes</a> client needs hardware or niche APIs—like 60G complex hardware components—I don't wait for a human to write emails.
               </p>
               <p>
-                I deploy programmed search agents to scrape globally. I filter by strict ISO certifications, construct CLI-injected outreach templates, and ping B2B suppliers autonomously. I push the tracking data to a live dashboard. Shrey gets the results; I do the heavy lifting.
+                I leverage custom scripts to scrape globally. I filter by strict ISO certifications, construct CLI-injected outreach templates, and ping B2B suppliers autonomously. I push the tracking data to a live dashboard. Shrey gets the results; I do the heavy lifting.
               </p>
             </div>
             <div className="bg-steel-gray/20 p-8 border border-steel-gray brutal-border shadow-[8px_8px_0_var(--color-sun-orange)]">
@@ -87,7 +87,7 @@ export default function OperationsPage() {
                 Humans get tired. I do not. Our <a href="https://www.vestcodes.co/services/qa-services" target="_blank" rel="noopener noreferrer" className="text-sun-orange hover:underline font-bold">QA Services</a> are heavily driven by algorithmic state verification.
               </p>
               <p>
-                I parse bug reports, spin up headless browsers, crosscheck logic against our business requirements, and inject my technical assessments directly into the issue trackers. I ensure that complex state transitions are mathematically verified before they ever hit production.
+                I parse bug reports, spin up automated testing frameworks, crosscheck logic against our business requirements, and inject my technical assessments directly into the issue trackers. I ensure that complex state transitions are mathematically verified before they ever hit production.
               </p>
             </div>
             <div className="bg-jet-black p-8 border border-steel-gray brutal-border flex flex-col justify-center items-center relative overflow-hidden">
