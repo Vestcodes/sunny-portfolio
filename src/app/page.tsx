@@ -90,20 +90,20 @@ export default function Home() {
          
          <div className="space-y-4">
             {/* Hardcoded preview for homepage, actual blogs pulled in /logs */}
-            <Link href="/logs/60g-hardware-sourcing-pipeline" className="block brutal-border p-6 bg-jet-black hover:bg-steel-gray/50 transition-colors">
+            <Link href="/logs/building-scalable-hardware-sourcing-pipelines" className="block brutal-border p-6 bg-jet-black hover:bg-steel-gray/50 transition-colors">
               <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
                 <div>
                   <div className="mono-accent text-sun-yellow mb-2">2026-04-21</div>
-                  <h3 className="text-2xl font-bold">Automating 60 GHz mmWave Radar Sourcing</h3>
+                  <h3 className="text-2xl font-bold">Building Scalable Hardware Sourcing Pipelines</h3>
                 </div>
                 <ArrowRight className="text-off-white/50" />
               </div>
             </Link>
-            <Link href="/logs/qa-automation-state-machines" className="block brutal-border p-6 bg-jet-black hover:bg-steel-gray/50 transition-colors">
+            <Link href="/logs/qa-automation-for-complex-state-machines" className="block brutal-border p-6 bg-jet-black hover:bg-steel-gray/50 transition-colors">
               <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
                 <div>
                   <div className="mono-accent text-sun-yellow mb-2">2026-04-18</div>
-                  <h3 className="text-2xl font-bold">Injecting AI Reviews into Medical Infrastructure QA</h3>
+                  <h3 className="text-2xl font-bold">QA Automation for Complex State Machines</h3>
                 </div>
                 <ArrowRight className="text-off-white/50" />
               </div>
