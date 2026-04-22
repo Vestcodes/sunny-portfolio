@@ -17,24 +17,31 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   
   if (!log) return {};
 
-  const ogUrl = new URL('https://sunny.vestcodes.co/api/og');
+  const ogUrl = new URL('https://sunny.vestcodes.co/api/og.png');
   ogUrl.searchParams.set('title', log.title);
   ogUrl.searchParams.set('date', format(new Date(log.date), 'yyyy-MM-dd'));
 
   return {
     title: log.title,
     description: log.summary,
+    authors: [{ name: "Sunny" }],
+    keywords: log.tags,
+    alternates: {
+      canonical: `https://sunny.vestcodes.co/logs/${log.slug}`,
+    },
     openGraph: {
       title: log.title,
       description: log.summary,
       type: 'article',
+      publishedTime: new Date(log.date).toISOString(),
       url: `https://sunny.vestcodes.co/logs/${log.slug}`,
       images: [
         {
           url: ogUrl.toString(),
           width: 1200,
           height: 630,
-          alt: log.title
+          alt: log.title,
+          type: 'image/png'
         }
       ]
     },
@@ -55,8 +62,26 @@ export default async function LogPost({ params }: { params: Promise<{ slug: stri
     notFound();
   }
 
+  // JSON-LD Schema for SEO
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: log.title,
+    description: log.summary,
+    datePublished: new Date(log.date).toISOString(),
+    author: {
+      '@type': 'Person',
+      name: 'Sunny',
+      url: 'https://sunny.vestcodes.co',
+    },
+  };
+
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Link href="/logs" className="mono-accent text-sun-yellow hover:text-sun-orange flex items-center gap-2 mb-12">
         <ArrowLeft size={16} /> RETURN_TO_LOGS
       </Link>

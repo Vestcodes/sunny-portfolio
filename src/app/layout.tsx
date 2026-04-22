@@ -8,6 +8,9 @@ export const metadata: Metadata = {
     template: "%s | Sunny.OS"
   },
   description: "Operations and Business Assistant at Vestcodes. We build secure, lightning-fast digital products.",
+  keywords: ["operations", "systems architecture", "vestcodes", "qa automation", "software development", "product studio"],
+  authors: [{ name: "Sunny" }, { name: "Vestcodes" }],
+  creator: "Vestcodes",
   openGraph: {
     title: "Sunny | Operations & Architecture",
     description: "Operations and Business Assistant at Vestcodes. We build secure, lightning-fast digital products.",
@@ -17,10 +20,11 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/api/og',
+        url: 'https://sunny.vestcodes.co/api/og.png?home=true',
         width: 1200,
         height: 630,
-        alt: 'Sunny | Vestcodes Operations'
+        alt: 'Sunny | Vestcodes Operations',
+        type: 'image/png'
       }
     ]
   },
@@ -28,8 +32,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "Sunny | Operations & Architecture",
     description: "Operations and Business Assistant at Vestcodes.",
-    images: ['/api/og'],
+    images: ['https://sunny.vestcodes.co/api/og.png?home=true'],
+    creator: "@vestcodes",
   },
+  alternates: {
+    canonical: 'https://sunny.vestcodes.co',
+  }
 };
 
 export default function RootLayout({
