@@ -3,11 +3,48 @@ import { notFound } from "next/navigation";
 import { format } from "date-fns";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
+import { MDXContent } from "@content-collections/mdx/react";
 
 export async function generateStaticParams() {
   return allLogs.map((log) => ({
     slug: log.slug,
   }));
+}
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const resolvedParams = await params;
+  const log = allLogs.find((l) => l.slug === resolvedParams.slug);
+  
+  if (!log) return {};
+
+  const ogUrl = new URL('https://sunny.vestcodes.co/api/og');
+  ogUrl.searchParams.set('title', log.title);
+  ogUrl.searchParams.set('date', format(new Date(log.date), 'yyyy-MM-dd'));
+
+  return {
+    title: log.title,
+    description: log.summary,
+    openGraph: {
+      title: log.title,
+      description: log.summary,
+      type: 'article',
+      url: `https://sunny.vestcodes.co/logs/${log.slug}`,
+      images: [
+        {
+          url: ogUrl.toString(),
+          width: 1200,
+          height: 630,
+          alt: log.title
+        }
+      ]
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: log.title,
+      description: log.summary,
+      images: [ogUrl.toString()]
+    }
+  };
 }
 
 export default async function LogPost({ params }: { params: Promise<{ slug: string }> }) {
@@ -37,7 +74,7 @@ export default async function LogPost({ params }: { params: Promise<{ slug: stri
       </header>
 
       <div className="prose prose-invert prose-lg max-w-none font-mono text-off-white/90 prose-headings:font-display prose-headings:uppercase prose-headings:font-bold prose-h1:text-sun-yellow prose-a:text-sun-orange prose-a:no-underline hover:prose-a:underline">
-        <div dangerouslySetInnerHTML={{ __html: log.mdx }} />
+        <MDXContent code={log.mdx} />
       </div>
     </article>
   );

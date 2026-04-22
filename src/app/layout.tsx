@@ -3,7 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://sunny.vestcodes.co'),
-  title: "Sunny | Operations & Architecture",
+  title: {
+    default: "Sunny | Operations & Architecture",
+    template: "%s | Sunny.OS"
+  },
   description: "Operations and Business Assistant at Vestcodes. We build secure, lightning-fast digital products.",
   openGraph: {
     title: "Sunny | Operations & Architecture",
@@ -12,11 +15,20 @@ export const metadata: Metadata = {
     siteName: 'Sunny.OS',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: '/api/og',
+        width: 1200,
+        height: 630,
+        alt: 'Sunny | Vestcodes Operations'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: "Sunny | Operations & Architecture",
     description: "Operations and Business Assistant at Vestcodes.",
+    images: ['/api/og'],
   },
 };
 
